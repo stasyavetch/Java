@@ -1,8 +1,12 @@
 package org.example;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalTime;
 import java.util.Comparator;
 import java.util.Objects;
+
 
 public class Athlete implements Comparable<Athlete> {
 

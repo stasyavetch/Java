@@ -3,6 +3,8 @@ package org.example;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+@Service
 public class InMemoryResultsProcessor implements ResultsProcessor{
 
     private TreeSet<Athlete> allResults = new TreeSet<>(
@@ -51,7 +54,7 @@ public class InMemoryResultsProcessor implements ResultsProcessor{
         return allResults.stream().filter(athlete -> athlete.getDistance() == dist).limit(count).collect(Collectors.toList());
     }
 
-    
+
 
     public boolean contains(Athlete athlete) {
         return allResults.contains(athlete);

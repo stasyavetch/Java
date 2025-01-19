@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82226e2-e09f-4958-b71d-d03ca809e4c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Athlete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InMemoryResultsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InMemoryResultsProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Athlete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Athlete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/InMemoryResultsProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/InMemoryResultsProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ResultsProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ResultsProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Sex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Sex.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProjectGradle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectGradle/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +66,20 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryResultsProcessorTest">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="GamesResult" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InMemoryResultsProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GamesResult" />
       <extension name="coverage">
@@ -113,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.InMemoryResultsProcessorTest" />
         <item itemvalue="JUnit.InMemoryResultsProcessorTest.getFastestResultBySex" />
         <item itemvalue="JUnit.InMemoryResultsProcessorTest.uploadFile" />
