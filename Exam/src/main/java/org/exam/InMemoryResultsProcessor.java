@@ -16,9 +16,9 @@ import java.util.Objects;
 public class InMemoryResultsProcessor implements ResultsProcessor{
     private int result;
 
-    private HashMap<Integer, PossibleKeys> idealKeys;
+    private Map<Integer, PossibleKeys> idealKeys;
 
-    private HashMap<Integer, PossibleKeys> factAnswer;
+    private Map<Integer, PossibleKeys> factAnswer;
 
     @Autowired
     private Environment env;
@@ -37,17 +37,17 @@ public class InMemoryResultsProcessor implements ResultsProcessor{
     @Override
     public int getResult() {
 
-        int oneGoupFirst = Integer.parseInt(env.getProperty("1group.first"));
-        int oneGoupLast = Integer.parseInt(env.getProperty("1group.last"));
-        int oneScore = Integer.parseInt(env.getProperty("1group"));
+        int oneGoupFirst = getParam("1group.first");
+        int oneGoupLast = getParam("1group.last");
+        int oneScore = getParam("1group");
 
-        int twoGoupFirst = Integer.parseInt(env.getProperty("2group.first"));
-        int twoGoupLast = Integer.parseInt(env.getProperty("2group.last"));
-        int twoScore = Integer.parseInt(env.getProperty("2group"));
+        int twoGoupFirst = getParam("2group.first");
+        int twoGoupLast = getParam("2group.last");
+        int twoScore = getParam("2group");
 
-        int threeGoupFirst = Integer.parseInt(env.getProperty("3group.first"));
-        int threeGoupLast = Integer.parseInt(env.getProperty("3group.last"));
-        int threeScore = Integer.parseInt(env.getProperty("3group"));
+        int threeGoupFirst = getParam("3group.first");
+        int threeGoupLast = getParam("3group.last");
+        int threeScore = getParam("3group");
 
         for (Map.Entry<Integer, PossibleKeys> idealEntry: idealKeys.entrySet()) {
             for (Map.Entry<Integer, PossibleKeys> factEntry: factAnswer.entrySet()) {
@@ -70,7 +70,11 @@ public class InMemoryResultsProcessor implements ResultsProcessor{
         return result;
     }
 
-    private void readFile(String filePath, HashMap<Integer, PossibleKeys> hashMap) throws FileNotFoundException {
+    private int getParam(String nameParam) {
+        return Integer.parseInt(env.getProperty(nameParam));
+    }
+
+    private void readFile(String filePath, Map<Integer, PossibleKeys> hashMap) throws FileNotFoundException {
 
 //        hashMap = new HashMap<>();
 
