@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.entity.ChangeContactDto;
 import org.example.entity.ContactDto;
 import org.example.facade.ContactFacade;
 import org.example.facade.RequestResult;
@@ -30,16 +31,15 @@ public class ContactController {
     }
 
     @PostMapping
-    public RequestResult createContact(
-            @RequestParam("name") String name, @RequestParam("surname") String surname,
-            @RequestParam("phoneNumber")  long phoneNumber, @RequestParam("email") String email) {
-        return contactFacade.createContact(name, surname, phoneNumber, email);
+    public RequestResult createContact(@RequestBody ContactDto contactDto) {
+        return contactFacade.createContact(contactDto.getName(), contactDto.getSurname(),
+                contactDto.getPhoneNumber(), contactDto.getEmail());
     }
 
     @PostMapping("/{id}")
     public RequestResult changeContact(
-            @RequestParam("id") Long id,
-            @RequestParam("key") String key, @RequestParam("newValue") String newValue) throws Exception {
-        return contactFacade.changeContact(id, key, newValue);
+            @PathVariable("id") Long id,
+            @RequestBody ChangeContactDto changeContactDto) throws Exception {
+        return contactFacade.changeContact(id, changeContactDto.getKey(), changeContactDto.getNewValue());
     }
 }

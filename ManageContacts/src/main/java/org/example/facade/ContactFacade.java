@@ -18,12 +18,12 @@ public class ContactFacade {
     }
 
     public List<ContactDto> getContacts() {
-        return contactDao.getContacts().stream().map(ContactDto::new).toList();
+        return contactDao.getContacts().stream().map(c -> new ContactDto(c.getId(), c.getName(), c.getSurname(), c.getPhoneNumber(), c.getEmail())).toList();
     }
 
     public ContactDto getContactById(Long idContact) {
         Contact contact = contactDao.getContactById(idContact);
-        return new ContactDto(contact);
+        return new ContactDto(contact.getId(), contact.getName(), contact.getSurname(), contact.getPhoneNumber(), contact.getEmail());
     }
 
     public RequestResult createContact(String name, String surname, long phoneNumber, String email) {
