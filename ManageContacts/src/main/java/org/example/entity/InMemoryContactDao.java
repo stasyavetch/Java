@@ -38,8 +38,11 @@ public class InMemoryContactDao implements ContactDao {
         ++contactId;
     }
 
-    public void changeContact(Long idContact, String key, String newValue) throws Exception {
+    public boolean changeContact(Long idContact, String key, String newValue) throws Exception {
         Contact contact = contactHashMap.get(idContact);
+        if (contact == null) {
+            return false;
+        }
 
         switch (key) {
             case "name":
@@ -55,8 +58,10 @@ public class InMemoryContactDao implements ContactDao {
                 contact.setEmail(newValue);
             default:
                 throw new Exception("Parameter not found");
+
+
         }
 
-
+        return true;
     }
 }

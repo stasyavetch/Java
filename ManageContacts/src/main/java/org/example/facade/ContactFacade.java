@@ -23,6 +23,9 @@ public class ContactFacade {
 
     public ContactDto getContactById(Long idContact) {
         Contact contact = contactDao.getContactById(idContact);
+        if (contact == null) {
+            return null;
+        }
         return new ContactDto(contact.getId(), contact.getName(), contact.getSurname(), contact.getPhoneNumber(), contact.getEmail());
     }
 
@@ -32,7 +35,10 @@ public class ContactFacade {
     }
 
     public RequestResult changeContact(Long idContact, String key, String newValue) throws Exception {
-        contactDao.changeContact(idContact, key, newValue);
-        return RequestResult.Success;
+        boolean res = contactDao.changeContact(idContact, key, newValue);
+        if (res)
+            return RequestResult.Success;
+        else
+            return RequestResult.NotSuccess;
     }
 }

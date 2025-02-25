@@ -9,5 +9,5 @@ public interface ContactDao {
 
     void createContact(String name, String surname, long phoneNumber, String email);
 
-    void changeContact(Long idContact, String key, String newValue) throws Exception;
+    boolean changeContact(Long idContact, String key, String newValue) throws Exception;
 }

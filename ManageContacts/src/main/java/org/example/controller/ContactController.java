@@ -5,6 +5,8 @@ import org.example.entity.ContactDto;
 import org.example.facade.ContactFacade;
 import org.example.facade.RequestResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,14 +28,23 @@ public class ContactController {
     }
 
     @GetMapping("/{id}")
-    public ContactDto getContactById(@PathVariable("id") Long id) {
-        return contactFacade.getContactById(id);
+    public ResponseEntity<?> getContactById(@PathVariable("id") Long id) {
+        ContactDto contactDto = contactFacade.getContactById(id);
+        if (contactDto == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(contactDto, HttpStatus.FOUND);
     }
 
     @PostMapping
-    public RequestResult createContact(@RequestBody ContactDto contactDto) {
-        return contactFacade.createContact(contactDto.getName(), contactDto.getSurname(),
+    public ResponseEntity<?> createContact(@RequestBody ContactDto contactDto) {
+
+        RequestResult result = contactFacade.createContact(contactDto.getName(), contactDto.getSurname(),
                 contactDto.getPhoneNumber(), contactDto.getEmail());
+        if (result == RequestResult.Success) {
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } else
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @PostMapping("/{id}")
