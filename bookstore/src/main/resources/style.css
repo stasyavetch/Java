@@ -1,0 +1,41 @@
+body {
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+td, th {
+    padding: 10px 10px 10px 10px;
+}
+
+header {
+    /* padding: 25px 25px 25px 25px; */
+    text-align: center;
+    color: #006666;
+}
+
+form {
+    padding: 25px 25px 25px 25px;
+    border: 2px dotted ;
+    /* margin-top: 20px; */
+    border-radius: 15px;
+    margin: 30px 30px 30px 30px;
+    /* background-color: #00CCCC; */
+}
+
+.inputs, .submit {
+    padding: 10px 10px 10px 10px;
+}
+
+.submit {
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
