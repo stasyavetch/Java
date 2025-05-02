@@ -1,6 +1,7 @@
 package com.greatbit.models;
 
 public class Book {
+    private String id;
     private  String name;
     private String author;
     private int pages;
@@ -8,10 +9,25 @@ public class Book {
     public Book() {
     }
 
+    public Book(String id, String name, String author, int pages) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+    }
+
     public Book(String name, String author, int pages) {
         this.name = name;
         this.author = author;
         this.pages = pages;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,5 +52,15 @@ public class Book {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", pages=" + pages +
+                '}';
     }
 }

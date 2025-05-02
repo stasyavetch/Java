@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82226e2-e09f-4958-b71d-d03ca809e4c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="a82226e2-e09f-4958-b71d-d03ca809e4c0" name="Changes" comment="Add changing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Athlete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InMemoryResultsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InMemoryResultsProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Athlete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Athlete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/InMemoryResultsProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/InMemoryResultsProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ResultsProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ResultsProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Sex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Sex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectGradle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectGradle/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Program Files/apache-maven-3.9.6-bin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/apache-maven-3.9.6-bin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -145,6 +133,14 @@
       <option name="presentableId" value="Default" />
       <updated>1736325594841</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add changing">
+      <created>1737282323055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737282323055</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,5 +153,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add changing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add changing" />
   </component>
 </project>
