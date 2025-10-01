@@ -10,4 +10,6 @@ public interface ContactDao {
     void createContact(String name, String surname, long phoneNumber, String email);
 
     boolean changeContact(Long idContact, String key, String newValue) throws Exception;
+
+    boolean deleteContactById(Long idContact);
 }

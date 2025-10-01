@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bce1d8c-d586-4ee7-9673-596d2ce68021" name="Changes" comment="add ResponseEntity">
-      <change beforePath="$PROJECT_DIR$/../GamesResult/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GamesResult/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/JdbcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/PropertiesConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/JdbcAccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ContactDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ContactDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/InMemoryContactDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/InMemoryContactDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/ApplicationConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Contact.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/ContactDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/ContactDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/ContactDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/ContactDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/InMemoryContactDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/InMemoryContactDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/facade/ContactFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/facade/ContactFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/facade/RequestResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/facade/RequestResult.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +60,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Program Files/apache-maven-3.9.6-bin"
+    "last_opened_file_path": "C:/Program Files/apache-maven-3.9.6-bin",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="ManageContacts" />
       <method v="2">
@@ -100,5 +118,9 @@
     <MESSAGE value="fix POST request" />
     <MESSAGE value="add ResponseEntity" />
     <option name="LAST_COMMIT_MESSAGE" value="add ResponseEntity" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

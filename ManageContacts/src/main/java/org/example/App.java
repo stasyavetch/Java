@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.config.ApplicationConfig;
+import org.example.entity.Contact;
+import org.example.entity.ContactDao;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,5 +15,11 @@ public class App
     {
         SpringApplication.run(App.class, args);
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+
+        ContactDao contactDao = applicationContext.getBean(ContactDao.class);
+
+        Contact contact = contactDao.getContactById(1l);
+
+        System.out.println(contact);
     }
 }

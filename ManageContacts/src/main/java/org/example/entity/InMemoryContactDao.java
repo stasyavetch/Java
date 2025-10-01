@@ -64,4 +64,9 @@ public class InMemoryContactDao implements ContactDao {
 
         return true;
     }
+
+    @Override
+    public boolean deleteContactById(Long idContact) {
+        return false;
+    }
 }
