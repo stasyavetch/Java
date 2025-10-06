@@ -10,10 +10,11 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 @Primary
-public class JdbcAccountDao implements ContactDao {
+public class JdbcContactDao implements ContactDao {
 
     private static final String GET_CONTACTS_SQL = "" +
             "SELECT *" +
@@ -29,13 +30,14 @@ public class JdbcAccountDao implements ContactDao {
             "VALUES(?, ?, ?, ?)";
 
     private static final String CHANGE_CONTACT_SQL = "" +
-            "UBDATE contacts" +
+            "UPDATE contacts" +
             "SET ? = ?" +
             "WHERE id = ?";
 
     private static final String DELETE_CONTACT_BY_ID_SQL = "" +
             "DELETE FROM contacts" +
             "WHERE id = ?";
+
 
     private static final RowMapper<Contact> CONTACT_ROW_MAPPER  =
             (rs, i) -> new Contact(rs.getLong("id"), rs.getString("name"),
@@ -44,7 +46,7 @@ public class JdbcAccountDao implements ContactDao {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public JdbcAccountDao(JdbcTemplate jdbcTemplate) {
+    public JdbcContactDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
@@ -110,5 +112,28 @@ public class JdbcAccountDao implements ContactDao {
             return false;
         else
             return true;
+    }
+
+    @Override
+    public boolean createContactsBatch(List<Contact> contactList) {
+        List<Object[]> args = contactList.stream()
+                .map(contact -> new Object[] {
+                        contact.getId(),
+                        contact.getName(),
+                        contact.getSurname(),
+                        contact.getPhoneNumber(),
+                        contact.getEmail()
+                })
+                .collect(Collectors.toList());
+
+        int[] res = jdbcTemplate.batchUpdate(CREATE_CONTACT_SQL, args);
+        boolean flag = true;
+        for (int i = 0; i < res.length; i++) {
+            if (res[i] <= 0 && res[i] != -2) {
+                flag = false;
+            }
+        }
+
+        return flag;
     }
 }

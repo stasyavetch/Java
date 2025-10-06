@@ -12,4 +12,6 @@ public interface ContactDao {
     boolean changeContact(Long idContact, String key, String newValue) throws Exception;
 
     boolean deleteContactById(Long idContact);
+
+    boolean createContactsBatch(List<Contact> contactList);
 }

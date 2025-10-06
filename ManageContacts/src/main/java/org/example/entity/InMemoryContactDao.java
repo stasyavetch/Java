@@ -67,6 +67,12 @@ public class InMemoryContactDao implements ContactDao {
 
     @Override
     public boolean deleteContactById(Long idContact) {
+        contactHashMap.remove(idContact);
+        return false;
+    }
+
+    @Override
+    public boolean createContactsBatch(List<Contact> contactList) {
         return false;
     }
 }
