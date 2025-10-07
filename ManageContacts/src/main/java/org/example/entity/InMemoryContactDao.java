@@ -56,6 +56,7 @@ public class InMemoryContactDao implements ContactDao {
                 break;
             case "email":
                 contact.setEmail(newValue);
+                break;
             default:
                 throw new Exception("Parameter not found");
 

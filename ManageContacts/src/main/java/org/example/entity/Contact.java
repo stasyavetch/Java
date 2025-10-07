@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 
 public class Contact {
-    private final long id;
+    private long id;
 
     @NotNull
     private String name;
@@ -26,6 +26,13 @@ public class Contact {
 
     public Contact(long id, String name, String surname, long phoneNumber, String email) {
         this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public Contact(String name, String surname, long phoneNumber, String email) {
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;

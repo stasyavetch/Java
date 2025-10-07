@@ -17,25 +17,25 @@ import java.util.stream.Collectors;
 public class JdbcContactDao implements ContactDao {
 
     private static final String GET_CONTACTS_SQL = "" +
-            "SELECT *" +
+            "SELECT * " +
             "FROM contacts";
 
     private static final String GET_CONTACT_BY_ID_SQL = "" +
-            "SELECT *" +
-            "FROM contacts" +
+            "SELECT * " +
+            "FROM contacts " +
             "WHERE id = ?";
 
     private static final String CREATE_CONTACT_SQL = "" +
-            "INSERT INTO contacts" +
+            "INSERT INTO contacts " +
             "VALUES(?, ?, ?, ?)";
 
     private static final String CHANGE_CONTACT_SQL = "" +
-            "UPDATE contacts" +
-            "SET ? = ?" +
+            "UPDATE contacts " +
+            "SET ? = ? " +
             "WHERE id = ?";
 
     private static final String DELETE_CONTACT_BY_ID_SQL = "" +
-            "DELETE FROM contacts" +
+            "DELETE FROM contacts " +
             "WHERE id = ?";
 
 
@@ -88,9 +88,28 @@ public class JdbcContactDao implements ContactDao {
 
     @Override
     public boolean changeContact(Long idContact, String key, String newValue) throws Exception {
+        String keyForSql = "";
+
+        switch (key) {
+            case "name":
+                keyForSql = "name";
+                break;
+            case "surname":
+                keyForSql = "surname";
+                break;
+            case "phoneNumber":
+                keyForSql = "phoneNumber";
+                break;
+            case "email":
+                keyForSql = "email";
+                break;
+            default:
+                throw new Exception("Parameter not found");
+
+        }
         int countChangesRow = jdbcTemplate.update(
                 CHANGE_CONTACT_SQL,
-                key,
+                keyForSql,
                 newValue,
                 idContact
         );
@@ -118,7 +137,6 @@ public class JdbcContactDao implements ContactDao {
     public boolean createContactsBatch(List<Contact> contactList) {
         List<Object[]> args = contactList.stream()
                 .map(contact -> new Object[] {
-                        contact.getId(),
                         contact.getName(),
                         contact.getSurname(),
                         contact.getPhoneNumber(),

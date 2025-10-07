@@ -30,7 +30,7 @@ public class JdbcContactService implements ContactService{
             String[] line;
             while ((line = reader.readNext()) != null) {
 
-                Contact newContact = new Contact(Integer.parseInt(line[0]), line[1], line[2], Long.parseLong(line[3]), line[4]);
+                Contact newContact = new Contact(line[0].split(" ")[1], line[0].split(" ")[0], Long.parseLong(line[1]), line[2]);
                 dataList.add(newContact);
             }
         } catch (IOException | CsvValidationException e) {
