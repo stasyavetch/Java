@@ -26,7 +26,7 @@ public class JdbcContactDao implements ContactDao {
             "WHERE id = ?";
 
     private static final String CREATE_CONTACT_SQL = "" +
-            "INSERT INTO contacts " +
+            "INSERT INTO contacts(name, surname, phoneNumber, email) " +
             "VALUES(?, ?, ?, ?)";
 
     private static final String CHANGE_CONTACT_SQL = "" +

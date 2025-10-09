@@ -10,6 +10,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -29,6 +30,8 @@ public class JdbcContactService implements ContactService{
 
             String[] line;
             while ((line = reader.readNext()) != null) {
+                System.out.println(line[0]);
+                System.out.println(line[2]);
 
                 Contact newContact = new Contact(line[0].split(" ")[1], line[0].split(" ")[0], Long.parseLong(line[1]), line[2]);
                 dataList.add(newContact);

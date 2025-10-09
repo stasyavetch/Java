@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.config.ApplicationConfig;
+import org.example.controller.ContactService;
 import org.example.entity.Contact;
 import org.example.entity.ContactDao;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +18,9 @@ public class App
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         ContactDao contactDao = applicationContext.getBean(ContactDao.class);
+
+        ContactService contactService = applicationContext.getBean(ContactService.class);
+        contactService.loadContactsFromCsv("C:\\Users\\Анастасия\\Desktop\\папка для всего\\java обучение\\homework\\Java\\ManageContacts\\src\\main\\resources\\contacts.csv");
 
         Contact contact = contactDao.getContactById(1l);
 
